@@ -13,7 +13,7 @@ public class Estoque {
 }
 
 //adiciona um novo eletrônico no estoque (não pode haver dois eletrônicos com mesmo código. 
-//Retorna true se o eletrônico foi adicionado. Retorna false se o eletrônico não foi adicionado.    OK//
+//Retorna true se o eletrônico foi adicionado. Retorna false se o eletrônico não foi adicionado.    Pronta//
 	public boolean cadastra(Eletronico novoEletro){
 		for(Eletronico eletro : estoqueDeEletronicos){			
 			if(eletro.getCodigo() == novoEletro.getCodigo()){
@@ -24,7 +24,7 @@ public class Estoque {
 			return true;					
 	}
 
-//Retorna todos os eletrônicos com o nome indicado, ou null se nenhum eletrônico foi encontrado.   OK//
+//Retorna todos os eletrônicos com o nome indicado, ou null se nenhum eletrônico foi encontrado.   Pronta//
 	public String busca(String nome) {
 		String res = "X";
 			for(Eletronico eletro : estoqueDeEletronicos){
@@ -43,7 +43,7 @@ public class Estoque {
 			return estoque;
 	}
 
-//Retorna o preço do eletrônico com o codigo indicado, ou -1.0 se nenhum eletrônico foi encontrado. OK//
+//Retorna o preço do eletrônico com o codigo indicado, ou -1.0 se nenhum eletrônico foi encontrado. Pronto//
 	public double pesquisaPreco(int codigo) {
 		double preco = -1.0;
 			for(Eletronico eletro : estoqueDeEletronicos){

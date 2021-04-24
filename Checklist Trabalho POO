@@ -1,0 +1,28 @@
+Checklist Trabalho POO
+
+Classe Estoque
+
+- cadastra(Eletronico) = Pronta
+- busca(String) = Pronta
+- buscaTudo() = Precisa Fazer
+- pesquisaPreco(int) = Pronta
+
+SubClasse Armazenamento de Eletronico 
+- calculaPreco() = Pronta
+- geraDescricao() = Pronta
+
+SubClasse Computador de Eletronico 
+- calculaPreco() = Pronta
+- geraDescricao() = Pronta
+
+SubClasse Impressora de Eletronico 
+- calculaPreco() = Pronta
+- geraDescricao() = Pronta
+
+Classe ACMEEletro 
+
+- Cadastrar eletrônico = Precisa Fazer
+- Mostrar todas as informações do estoque = Precisa Fazer
+- Pesquisar eletrônico por nome = Precisa Fazer
+- Calcular preço = Precisa Fazer
+- Sair: termina a execução do sistema. = Precisa Fazer

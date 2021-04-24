@@ -1,7 +1,5 @@
 public class ACMEEletro {
 
-	private Estoque estoque;
-
 	public void inicializa() {
 
 	}
