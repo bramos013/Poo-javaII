@@ -5,7 +5,15 @@ public class Estoque {
 
 	private List<Eletronico> estoqueDeEletronicos = new ArrayList<>();
 
-	//Classe Responsável pelo cadastro de Eletronicos no Estoque    OK//
+//Classe Teste do Estoque    
+ 	public void listarEstoque(){
+	for(Eletronico eletro : estoqueDeEletronicos){
+		System.out.println(eletro.toString());
+	}
+}
+
+//adiciona um novo eletrônico no estoque (não pode haver dois eletrônicos com mesmo código. 
+//Retorna true se o eletrônico foi adicionado. Retorna false se o eletrônico não foi adicionado.    OK//
 	public boolean cadastra(Eletronico novoEletro){
 		for(Eletronico eletro : estoqueDeEletronicos){			
 			if(eletro.getCodigo() == novoEletro.getCodigo()){
@@ -16,14 +24,7 @@ public class Estoque {
 			return true;					
 	}
 
-  //Classe Teste do Estoque    
-	public void listarEstoque(){
-		for(Eletronico eletro : estoqueDeEletronicos){
-			System.out.println(eletro.toString());
-		}
-	}
-
-//	Classe pesquisar Estoque por nome do Eletrônico   OK//
+//Retorna todos os eletrônicos com o nome indicado, ou null se nenhum eletrônico foi encontrado.   OK//
 	public String busca(String nome) {
 		String res = "X";
 			for(Eletronico eletro : estoqueDeEletronicos){
@@ -33,19 +34,23 @@ public class Estoque {
 		return res;
 	}
 
-/*
+//Retorna a descrição de todos os eletrônicos cadastrados, com os respectivos preços. Falta Finalizar//
 	public String buscaTudo() {
-		return null;
+		String estoque = null;
+		for(Eletronico eletro : estoqueDeEletronicos){
+			System.out.println(eletro.toString());
+		}
+			return estoque;
 	}
-*/
-	//Método de pesquisa de preço através do Código  OK//
+
+//Retorna o preço do eletrônico com o codigo indicado, ou -1.0 se nenhum eletrônico foi encontrado. OK//
 	public double pesquisaPreco(int codigo) {
 		double preco = -1.0;
 			for(Eletronico eletro : estoqueDeEletronicos){
                 if(eletro.getCodigo() == codigo)
 					preco = eletro.getValorBase();                                            									
 			}
-		System.out.printf("Valor do Eletrônico R$ %.2f\n",preco);
+		System.out.println("Valor do Eletrônico R$ " + preco);
 			return preco;
 	}
 	
