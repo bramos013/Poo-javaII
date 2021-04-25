@@ -23,7 +23,6 @@ public class Computador extends Eletronico {
 		return descricao;
 	}			
 
-//Retorna o valor do preço do eletrônico que é o valor base com acréscimo dependendo do tipo do eletrônico		
 	@Override
 	public double calculaPreco(){
 	String tipo = this.tipo;
@@ -41,4 +40,22 @@ public class Computador extends Eletronico {
 		System.out.println("Total = " + (valorBase+acrescimo));
 		return preco;
 	}
+/*Retorna o valor do preço do eletrônico que é o valor base com acréscimo dependendo do tipo do eletrônico		
+	@Override
+	public double calculaPreco(){
+	String tipo = this.tipo;
+	double preco = valorBase;
+	double acrescimo = 0;
+		if(tipo.equals("Desktop")){
+			 acrescimo = this.valorBase * 0.1;
+		}
+		if(tipo.equals("Notebook")){
+			 acrescimo = this.valorBase * 0.15;
+		}
+		if(tipo.equals("Servidor")){
+			 acrescimo = this.valorBase * 0.2;
+		}
+		System.out.println("Total = " + (valorBase+acrescimo));
+		return preco;
+	}*/
 }
