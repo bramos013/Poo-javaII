@@ -22,9 +22,8 @@ public class ACMEEletro {
 	}
 
 	public void executa() {
-		Scanner menu = new Scanner(System.in);
-		Scanner subMenu = new Scanner(System.in);
 		Scanner scan = new Scanner(System.in);
+		//Scanner scan = new Scanner(System.in);
         boolean continua = true;
             while(continua){
 
@@ -35,7 +34,7 @@ public class ACMEEletro {
 			System.out.println("\t4 - Calcular Preço");
             System.out.println("\t5 - Sair");
 
-            int opt = menu.nextInt();
+            int opt = scan.nextInt();
             switch (opt) {
 				case 1: //Opção de Escolha Cadastrar
 					System.out.println("Selecione o Tipo do Eletronico: ");
@@ -44,7 +43,7 @@ public class ACMEEletro {
 						System.out.println("\t3 - Impressora");                      
 						System.out.println("\t4 - Sair");   
 					
-					int opt2 = subMenu.nextInt();
+					int opt2 = scan.nextInt();
 					switch(opt2){
 						case 1: //Opção de Cadastro Armazenamento
 							System.out.println("Nome do Dispositivo de Armazenamento: ");
@@ -60,7 +59,7 @@ public class ACMEEletro {
 									System.out.println("Eletrônico repetido");
 								}
 
-					break;	
+						break;	
 						case 2:	//Opção de Cadastro Computador
 							System.out.println("Nome do Computador:");
 								String nomeComputador = scan.nextLine();
@@ -75,7 +74,7 @@ public class ACMEEletro {
 							if(estoque.cadastra(novoComputador) == false){
 								System.out.println("Eletrônico repetido");
 							}
-					break;
+						break;
 						case 3: //Opção de Cadastro Impressora
 						System.out.println("Nome da Impressora: ");						
 							String nomeImpressora = scan.nextLine();
@@ -100,12 +99,13 @@ public class ACMEEletro {
 					break;
 				case 3:	//Opção Para Pesquisa por nome
 						System.out.println("Informe o Nome do Eletrônico");
+						scan.nextLine();
 							String nomeEletronico = scan.nextLine();
 							estoque.busca(nomeEletronico);
 					break;
 				case 4: //Opção Para Calculo de Preco
 						System.out.println("Informe o Código do Produto");
-							int codigoProduto = scan.nextInt();
+							//int codigoProduto = scan.nextInt();
 					//		estoque.calculaPreco();
 					break;
 				case 5:  //Sair
