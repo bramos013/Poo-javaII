@@ -20,6 +20,7 @@ public class Impressora extends Eletronico {
 	@Override
 	public String geraDescricao(){
 		String descricao = super.toString()+ " ; Tecnologia " + tecnologia;
+		System.out.println(descricao);		
 		return descricao;
 	}			
 
@@ -40,5 +41,11 @@ public class Impressora extends Eletronico {
 			}
 			System.out.println("Total = " + (valorBase+acrescimo));
 			return preco;
+	}
+
+	@Override
+	public String toString(){
+		return super.toString() +
+				"; Tecnologia: " + tecnologia;
 	}
 }

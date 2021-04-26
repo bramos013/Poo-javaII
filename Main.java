@@ -4,7 +4,6 @@ public class Main {
 		ACMEEletro session = new ACMEEletro();		
 		session.inicializa();
 
-	
 		//Teste Cadastro
 	/*
 		//Teste Busca
@@ -18,8 +17,8 @@ public class Main {
 		estoque.pesquisaPreco(1);
 		estoque.pesquisaPreco(2);
 */
-/*
-		eletroUm.calculaPreco();	
+	
+	/*
 		eletroDois.calculaPreco();
 		eletroTres.calculaPreco();
 		eletroQuatro.calculaPreco();

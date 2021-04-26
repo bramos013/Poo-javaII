@@ -17,18 +17,16 @@ public class Estoque {
 			return true;					
 	}
 
-//Retorna todos os eletrônicos com o nome indicado, ou null se nenhum eletrônico foi encontrado.   Corrigir//
-	public String busca(String nome) {
-		String res = "x";
-			for(Eletronico eletro : listaDeEletronicos){
-				if(eletro.getNome().equals(nome))
-					eletro.mostrarNome();
-					return res;
-			}
-			res = null;
-			System.out.println(res);
+//Retorna todos os eletrônicos com o nome indicado, ou null se nenhum eletrônico foi encontrado.   Pronta//
+		public String busca(String nome) {
+			String res = null;
+				for(Eletronico eletro : listaDeEletronicos){
+					if(eletro.getNome().equals(nome)){
+						res =eletro.geraDescricao();											
+					}
+				}
 		return res;
-	}
+		}
 
 //Retorna a descrição de todos os eletrônicos cadastrados, com os respectivos preços. Pronta//
 public String buscaTudo() {

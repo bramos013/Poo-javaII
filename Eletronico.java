@@ -1,5 +1,6 @@
 public abstract class Eletronico {
 
+	public static Object listaDeEletronicos;
 	protected String nome;
 	protected int codigo;
 	protected double valorBase;
@@ -56,8 +57,8 @@ public abstract class Eletronico {
 	
 	public String toString(){
 		return 
-		" Nome: " + nome +
-		" ; Codigo: " + codigo +
-		" ; Valor Base: " + valorBase;
+		"Nome: " + nome +
+		"; Codigo: " + codigo +
+		"; Valor Base: " + String.format("%.2f",valorBase);
 	}
 }

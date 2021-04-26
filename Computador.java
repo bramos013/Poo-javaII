@@ -8,18 +8,11 @@ public class Computador extends Eletronico {
 		this.tipo = tipo;		
 	}
 
-	public String getTipo() {
-		return tipo;
-	}
-
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
-	}
-
 //Gera uma String em que cada atributo gera o par: ‘nome do atributo : valor’, se há mais de um atributo, cada par é separado por “;”
 	@Override
 	public String geraDescricao(){
 		String descricao = super.toString()+ " ; Tipo " + tipo;
+		System.out.println(descricao);
 		return descricao;
 	}			
 
@@ -58,4 +51,10 @@ public class Computador extends Eletronico {
 		System.out.println("Total = " + (valorBase+acrescimo));
 		return preco;
 	}*/
+
+	@Override
+	public String toString(){
+		return super.toString() +
+				"; Tipo: " + tipo;
+	}
 }
