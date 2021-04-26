@@ -23,7 +23,7 @@ public class ACMEEletro {
 
 	public void executa() {
 		Scanner scan = new Scanner(System.in);
-		//Scanner scan = new Scanner(System.in);
+		Scanner subMenu = new Scanner(System.in);
         boolean continua = true;
             while(continua){
 
@@ -43,13 +43,14 @@ public class ACMEEletro {
 						System.out.println("\t3 - Impressora");                      
 						System.out.println("\t4 - Sair");   
 					
-					int opt2 = scan.nextInt();
+					int opt2 = subMenu.nextInt();
 					switch(opt2){
 						case 1: //Opção de Cadastro Armazenamento
 							System.out.println("Nome do Dispositivo de Armazenamento: ");
+							scan.nextLine();	
 								String nomeArmazenamento = scan.nextLine();
 							System.out.println("Código do Produto: ");
-								int codigoArmazenamento = scan.nextInt();
+								int codigoArmazenamento = scan.nextInt();								
 							System.out.println("Valor Base do Produto: ");
 								double valorBaseArmazenamento = scan.nextDouble();
 							System.out.println("Espaco de Armazenamento: ");
@@ -62,6 +63,7 @@ public class ACMEEletro {
 						break;	
 						case 2:	//Opção de Cadastro Computador
 							System.out.println("Nome do Computador:");
+							scan.nextLine();	
 								String nomeComputador = scan.nextLine();
 							System.out.println("Código do Produto:");
 								int codigoComputador = scan.nextInt();
